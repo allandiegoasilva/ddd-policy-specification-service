@@ -1,4 +1,4 @@
-import { ISpecification } from "../../contracts/specification.contract";
+import { ISpecification } from "../contracts/specification.contract";
 
 export class AndSpecification<T> implements ISpecification<T> {
   constructor(private readonly specifications: ISpecification<T>[]) {}
