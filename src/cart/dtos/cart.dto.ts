@@ -1,5 +1,7 @@
+import { Product } from "@/product/entity/product.entity";
+
 export type CartDto = {
   id: string;
-  products: {name: string, price: number}[];
+  products: Product[];
   discount: number;
 }

@@ -12,8 +12,13 @@ export class Cart {
     });
   }
 
+  get data(): CartDto {
+    return this.props;
+  }
+
   get total(): number {
-    const total = this.props.products.reduce((acc, product) => acc + product.price, 0);
+    const total = this.props.products.reduce((acc, product) => acc + product.data.price, 0);
+   
     return total - this.props.discount;
   }
 
